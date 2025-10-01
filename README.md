@@ -1,11 +1,10 @@
-
 # Biostatistics-Research-Platform-R
 
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-
 ![RStudio](https://img.shields.io/badge/RStudio-47A141?style=for-the-badge&logo=rstudio&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Testes](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)
 
 ## English
 
@@ -41,44 +40,16 @@ Biostatistics-Research-Platform-R/
 ├── README.md             # Project README file (this file)
 └── CONTRIBUTING.md       # Guidelines for contributing to the project
 └── CODE_OF_CONDUCT.md    # Code of Conduct for the project community
+└── .Rprofile             # R environment configuration
 ```
 
 ### Workflow Diagram
 
-```mermaid
-graph TD
-    A[Start] --> B{Load Data (CSV)};
-    B --> C{Perform Analysis};
-    C --> D{Descriptive Statistics};
-    C --> E{Correlation Matrix};
-    C --> F{T-Test / ANOVA};
-    C --> G{Linear Regression};
-    C --> H{Generate Plot};
-    D --> I[Save Descriptive Stats];
-    E --> J[Save Correlation Matrix];
-    F --> K[Save Hypothesis Test Results];
-    G --> L[Save Regression Results];
-    H --> M[Save Plot (PNG)];
-    I & J & K & L & M --> N[End];
-```
+![Workflow Diagram](docs/workflow_diagram.png)
 
 ### Architecture Diagram
 
-```mermaid
-graph LR
-    A[User/Researcher] -- Interacts with --> B(RStudio/CLI)
-    B -- Executes --> C[main.R Script]
-    C -- Reads --> D[Data Files (CSV)]
-    C -- Uses R Packages --> E{ggplot2, dplyr, tidyr, readr, broom}
-    C -- Generates --> F[Analysis Results]
-    F -- Includes --> G[Descriptive Stats]
-    F -- Includes --> H[Correlation Matrix]
-    F -- Includes --> I[Hypothesis Test Results]
-    F -- Includes --> J[Regression Results]
-    F -- Includes --> K[Plots (PNG)]
-    F -- Stored in --> L[results/ Directory]
-    L -- Can be viewed by --> A
-```
+![Architecture Diagram](docs/architecture_diagram.png)
 
 ### Installation
 
@@ -90,7 +61,7 @@ graph LR
 2.  **Install R and R packages:**
     Ensure you have R installed. Then, install the required R packages by running the following command in an R console:
     ```R
-    install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "broom"), repos="http://cran.us.r-project.org")
+    install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "broom", "testthat"), repos="http://cran.us.r-project.org", lib="~/R/library")
     ```
 
 ### Usage
@@ -121,19 +92,18 @@ source("src/main.R")
 
 ### Tests
 
-Functional tests are available in the `tests/` directory. To run them:
+Unit tests are available in the `tests/` directory. To run them:
 
 ```bash
 cd Biostatistics-Research-Platform-R
-Rscript tests/test_main.R
+Rscript -e "library(testthat); test_file(\"tests/testthat.R\")"
 ```
 
-This will execute the `test_main.R` script, which loads sample data, runs the analysis, and verifies the creation of output files.
+This will execute the `testthat.R` script, which loads sample data, runs the analysis, and verifies the creation of output files.
 
 ### Author
 
 **Gabriel Demetrios Lafis**
-
 
 ---
 
@@ -171,44 +141,16 @@ Biostatistics-Research-Platform-R/
 ├── README.md             # Arquivo README do projeto (este arquivo)
 └── CONTRIBUTING.md       # Diretrizes para contribuir com o projeto
 └── CODE_OF_CONDUCT.md    # Código de Conduta para a comunidade do projeto
+└── .Rprofile             # Configuração do ambiente R
 ```
 
 ### Diagrama de Fluxo de Trabalho
 
-```mermaid
-graph TD
-    A[Início] --> B{Carregar Dados (CSV)};
-    B --> C{Realizar Análise};
-    C --> D{Estatísticas Descritivas};
-    C --> E{Matriz de Correlação};
-    C --> F{Teste T / ANOVA};
-    C --> G{Regressão Linear};
-    C --> H{Gerar Gráfico};
-    D --> I[Salvar Estatísticas Descritivas];
-    E --> J[Salvar Matriz de Correlação];
-    F --> K[Salvar Resultados do Teste de Hipóteses];
-    G --> L[Salvar Resultados da Regressão];
-    H --> M[Salvar Gráfico (PNG)];
-    I & J & K & L & M --> N[Fim];
-```
+![Diagrama de Fluxo de Trabalho](docs/workflow_diagram.png)
 
 ### Diagrama de Arquitetura
 
-```mermaid
-graph LR
-    A[Usuário/Pesquisador] -- Interage com --> B(RStudio/CLI)
-    B -- Executa --> C[Script main.R]
-    C -- Lê --> D[Arquivos de Dados (CSV)]
-    C -- Usa Pacotes R --> E{ggplot2, dplyr, tidyr, readr, broom}
-    C -- Gera --> F[Resultados da Análise]
-    F -- Inclui --> G[Estatísticas Descritivas]
-    F -- Inclui --> H[Matriz de Correlação]
-    F -- Inclui --> I[Resultados do Teste de Hipóteses]
-    F -- Inclui --> J[Resultados da Regressão]
-    F -- Inclui --> K[Gráficos (PNG)]
-    F -- Armazenado em --> L[Diretório results/]
-    L -- Pode ser visualizado por --> A
-```
+![Diagrama de Arquitetura](docs/architecture_diagram.png)
 
 ### Instalação
 
@@ -220,7 +162,7 @@ graph LR
 2.  **Instale R e os pacotes R:**
     Certifique-se de ter o R instalado. Em seguida, instale os pacotes R necessários executando o seguinte comando em um console R:
     ```R
-    install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "broom"), repos="http://cran.us.r-project.org")
+    install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "broom", "testthat"), repos="http://cran.us.r-project.org", lib="~/R/library")
     ```
 
 ### Uso
@@ -251,17 +193,16 @@ source("src/main.R")
 
 ### Testes
 
-Testes funcionais estão disponíveis no diretório `tests/`. Para executá-los:
+Testes unitários estão disponíveis no diretório `tests/`. Para executá-los:
 
 ```bash
 cd Biostatistics-Research-Platform-R
-Rscript tests/test_main.R
+Rscript -e "library(testthat); test_file(\"tests/testthat.R\")"
 ```
 
-Isso executará o script `test_main.R`, que carrega dados de exemplo, executa a análise e verifica a criação dos arquivos de saída.
+Isso executará o script `testthat.R`, que carrega dados de exemplo, executa a análise e verifica a criação dos arquivos de saída.
 
 ### Autor
 
 **Gabriel Demetrios Lafis**
-
 

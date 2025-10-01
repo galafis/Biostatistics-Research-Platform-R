@@ -20,7 +20,7 @@ We welcome contributions to this project! Please follow these guidelines to ensu
 5.  **Write tests:** If you're adding new functionality, please write corresponding tests. For bug fixes, a test that reproduces the bug before the fix and passes after the fix is ideal.
 6.  **Run tests:** Before submitting, make sure all existing tests pass and your new tests pass.
     ```bash
-    Rscript tests/test_main.R
+    Rscript -e "library(testthat); test_file(\"tests/testthat.R\")"
     ```
 7.  **Commit your changes:** Write clear and concise commit messages.
     ```bash

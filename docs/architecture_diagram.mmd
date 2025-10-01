@@ -1,0 +1,13 @@
+graph LR
+    A[User/Researcher] -- Interacts with --> B[RStudio/CLI]
+    B -- Executes --> C[main.R Script]
+    C -- Reads --> D[Data Files CSV]
+    C -- Uses R Packages --> E[ggplot2, dplyr, tidyr, readr, broom]
+    C -- Generates --> F[Analysis Results]
+    F -- Includes --> G[Descriptive Stats]
+    F -- Includes --> H[Correlation Matrix]
+    F -- Includes --> I[Hypothesis Test Results]
+    F -- Includes --> J[Regression Results]
+    F -- Includes --> K[Plots PNG]
+    F -- Stored in --> L[results/ Directory]
+    L -- Can be viewed by --> A
