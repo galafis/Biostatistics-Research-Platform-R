@@ -1,10 +1,8 @@
 
 # Biostatistics-Research-Platform-R
 
-![Hero Image](docs/images/hero_image.png)
-
-
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
+
 ![RStudio](https://img.shields.io/badge/RStudio-47A141?style=for-the-badge&logo=rstudio&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -118,10 +116,6 @@ This will execute the `test_main.R` script, which loads sample data, runs the an
 
 **Gabriel Demetrios Lafis**
 
-### GitHub Pages
-
-Você pode acessar a página do projeto aqui: [Biostatistics Research Platform R GitHub Pages](https://galafis.github.io/Biostatistics-Research-Platform-R/)
-
 
 ---
 
@@ -233,9 +227,5 @@ Isso executará o script `test_main.R`, que carrega dados de exemplo, executa a 
 ### Autor
 
 **Gabriel Demetrios Lafis**
-
-### GitHub Pages
-
-Você pode acessar a página do projeto aqui: [Biostatistics Research Platform R GitHub Pages](https://galafis.github.io/Biostatistics-Research-Platform-R/)
 
 
