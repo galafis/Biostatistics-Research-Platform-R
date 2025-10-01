@@ -62,6 +62,24 @@ graph TD
     I & J & K & L & M --> N[End];
 ```
 
+### Architecture Diagram
+
+```mermaid
+graph LR
+    A[User/Researcher] -- Interacts with --> B(RStudio/CLI)
+    B -- Executes --> C[main.R Script]
+    C -- Reads --> D[Data Files (CSV)]
+    C -- Uses R Packages --> E{ggplot2, dplyr, tidyr, readr, broom}
+    C -- Generates --> F[Analysis Results]
+    F -- Includes --> G[Descriptive Stats]
+    F -- Includes --> H[Correlation Matrix]
+    F -- Includes --> I[Hypothesis Test Results]
+    F -- Includes --> J[Regression Results]
+    F -- Includes --> K[Plots (PNG)]
+    F -- Stored in --> L[results/ Directory]
+    L -- Can be viewed by --> A
+```
+
 ### Installation
 
 1.  **Clone the repository:**
@@ -172,6 +190,24 @@ graph TD
     G --> L[Salvar Resultados da Regressão];
     H --> M[Salvar Gráfico (PNG)];
     I & J & K & L & M --> N[Fim];
+```
+
+### Diagrama de Arquitetura
+
+```mermaid
+graph LR
+    A[Usuário/Pesquisador] -- Interage com --> B(RStudio/CLI)
+    B -- Executa --> C[Script main.R]
+    C -- Lê --> D[Arquivos de Dados (CSV)]
+    C -- Usa Pacotes R --> E{ggplot2, dplyr, tidyr, readr, broom}
+    C -- Gera --> F[Resultados da Análise]
+    F -- Inclui --> G[Estatísticas Descritivas]
+    F -- Inclui --> H[Matriz de Correlação]
+    F -- Inclui --> I[Resultados do Teste de Hipóteses]
+    F -- Inclui --> J[Resultados da Regressão]
+    F -- Inclui --> K[Gráficos (PNG)]
+    F -- Armazenado em --> L[Diretório results/]
+    L -- Pode ser visualizado por --> A
 ```
 
 ### Instalação
