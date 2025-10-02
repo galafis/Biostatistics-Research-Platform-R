@@ -1,49 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biostatistics Research Platform R</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0056b3;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.8em;
-            color: #666;
-        }
-    </style>
+    <title>Plataforma de Pesquisa Bioestatística em R</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Biostatistics Research Platform R</h1>
-        <p>Bem-vindo à Plataforma de Pesquisa Bioestatística em R. Este repositório oferece um conjunto robusto de ferramentas e scripts para análise estatística avançada, com foco em reprodutibilidade e facilidade de uso.</p>
-        <p>Explore o código-fonte, a documentação e os exemplos para entender como esta plataforma pode auxiliar em seus projetos de pesquisa bioestatística.</p>
-        <p>Para mais detalhes, por favor, consulte o <a href="https://github.com/galafis/Biostatistics-Research-Platform-R/blob/main/README.md">README.md</a> do projeto.</p>
-        <div class="footer">
-            <p>Desenvolvido por Gabriel Demetrios Lafis</p>
+    <header>
+        <div class="container">
+            <h1>Plataforma de Pesquisa Bioestatística em R</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Visão Geral</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#structure">Estrutura do Projeto</a></li>
+                    <li><a href="#installation">Instalação</a></li>
+                    <li><a href="#usage">Uso</a></li>
+                    <li><a href="https://github.com/galafis/Biostatistics-Research-Platform-R" target="_blank">Repositório GitHub <i class="fab fa-github"></i></a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <img src="hero-image.png" alt="Gráfico de Bioestatística" class="hero-image">
+                <p>Bem-vindo à Plataforma de Pesquisa Bioestatística em R. Este repositório oferece um conjunto robusto de ferramentas e scripts para análise estatística avançada, com foco em reprodutibilidade e facilidade de uso.</p>
+                <p>Explore o código-fonte, a documentação e os exemplos para entender como esta plataforma pode auxiliar em seus projetos de pesquisa bioestatística.</p>
+                <a href="https://github.com/galafis/Biostatistics-Research-Platform-R/blob/main/README.md" target="_blank" class="btn">Ver Documentação Completa</a>
+            </div>
+        </section>
+
+        <section id="overview" class="alt-background">
+            <div class="container">
+                <h2>Visão Geral</h2>
+                <p>Este repositório, <strong>Biostatistics-Research-Platform-R</strong>, oferece uma plataforma robusta e profissional baseada em R para análise bioestatística avançada. Ele foi projetado para lidar com várias tarefas estatísticas, incluindo estatísticas descritivas, análise de correlação, testes t, ANOVA e regressão linear, com recursos integrados de carregamento, processamento e visualização de dados. A plataforma enfatiza código limpo, reprodutibilidade e facilidade de uso para pesquisadores e cientistas de dados.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li><strong>Carregamento de Dados</strong>: Suporta entrada de arquivos CSV para integração flexível de dados.</li>
+                    <li><strong>Estatísticas Descritivas</strong>: Calcula média, desvio padrão e mediana para variáveis numéricas.</li>
+                    <li><strong>Análise de Correlação</strong>: Calcula matrizes de correlação para conjuntos de dados numéricos.</li>
+                    <li><strong>Teste de Hipóteses</strong>: Inclui implementações para testes t e ANOVA para comparações de grupos.</li>
+                    <li><strong>Análise de Regressão</strong>: Realiza regressão linear para modelar relações entre variáveis.</li>
+                    <li><strong>Visualização de Dados</strong>: Gera gráficos de dispersão informativos com linhas de regressão usando <code>ggplot2</code>.</li>
+                    <li><strong>Saída Estruturada</strong>: Salva todos os resultados da análise (estatísticas, correlações, gráficos) em um diretório de saída designado.</li>
+                    <li><strong>Interface de Linha de Comando (CLI)</strong>: Execute análises facilmente com dados de entrada e caminhos de saída especificados.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="structure" class="alt-background">
+            <div class="container">
+                <h2>Estrutura do Projeto</h2>
+                <pre><code>Biostatistics-Research-Platform-R/
+├── data/                 # Arquivos de dados de exemplo
+│   └── sample_data.csv
+├── docs/                 # Documentação e relatórios adicionais
+├── results/              # Diretório de saída para os resultados da análise
+├── src/                  # Código-fonte da plataforma de bioestatística
+│   └── main.R
+├── tests/                # Testes unitários e funcionais
+│   └── test_main.R
+├── .github/              # Configurações específicas do GitHub (ex: workflows, GitHub Pages)
+├── LICENSE               # Arquivo de licença do projeto
+├── README.md             # Arquivo README do projeto (este arquivo)
+└── CONTRIBUTING.md       # Diretrizes para contribuir com o projeto
+└── CODE_OF_CONDUCT.md    # Código de Conduta para a comunidade do projeto
+└── .Rprofile             # Configuração do ambiente R
+</code></pre>
+            </div>
+        </section>
+
+        <section id="installation">
+            <div class="container">
+                <h2>Instalação</h2>
+                <h3>1. Clone o repositório:</h3>
+                <pre><code>git clone https://github.com/galafis/Biostatistics-Research-Platform-R.git
+cd Biostatistics-Research-Platform-R
+</code></pre>
+                <h3>2. Instale R e os pacotes R:</h3>
+                <p>Certifique-se de ter o R instalado. Em seguida, instale os pacotes R necessários executando o seguinte comando em um console R:</p>
+                <pre><code>install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "broom", "testthat"), repos="http://cran.us.r-project.org", lib="~/R/library")
+</code></pre>
+            </div>
+        </section>
+
+        <section id="usage" class="alt-background">
+            <div class="container">
+                <h2>Uso</h2>
+                <h3>Interface de Linha de Comando (CLI)</h3>
+                <p>Para executar uma análise a partir da linha de comando, use <code>Rscript</code>:</p>
+                <pre><code>Rscript src/main.R --input data/sample_data.csv --output results
+</code></pre>
+                <ul>
+                    <li><code>--input</code>: Caminho para o seu arquivo de dados CSV de entrada.</li>
+                    <li><code>--output</code>: Diretório onde os resultados serão salvos. Se não existir, será criado.</li>
+                </ul>
+                <h3>Modo Interativo</h3>
+                <p>Você também pode executar o script interativamente em um ambiente R. Se nenhum argumento de linha de comando for fornecido, o script gerará sample data e realizará uma análise, salvando os resultados em <code>results_interactive/</code>.</p>
+                <pre><code>source("src/main.R")
+</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gabriel Demetrios Lafis. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://github.com/galafis" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriel-demetrios-lafis" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
