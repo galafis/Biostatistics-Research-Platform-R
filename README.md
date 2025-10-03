@@ -6,6 +6,10 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Testes](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)
 
+## 🖼️ Imagem Hero
+
+![Hero Image](hero-image.png)
+
 ## English
 
 ### Overview
@@ -180,7 +184,7 @@ Rscript src/main.R --input data/sample_data.csv --output results
 
 #### Modo Interativo
 
-Você também pode executar o script interativamente em um ambiente R. Se nenhum argumento de linha de comando for fornecido, o script gerará dados de exemplo e realizará uma análise, salvando os resultados em `results_interactive/`.
+You can also run the script interactively within an R environment. If no command-line arguments are provided, the script will generate sample data and perform an analysis, saving results to `results_interactive/`.
 
 ```R
 source("src/main.R")
@@ -205,4 +209,5 @@ Isso executará o script `testthat.R`, que carrega dados de exemplo, executa a a
 ### Autor
 
 **Gabriel Demetrios Lafis**
+
 
