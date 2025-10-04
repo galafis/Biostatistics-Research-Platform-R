@@ -1,10 +1,7 @@
 library(testthat)
 library(readr)
 
-current_dir <- getwd()
-setwd("..") # Move up to the root of the repository
 source("src/main.R")
-setwd(current_dir) # Restore original working directory
 
 # Define a temporary directory for test outputs
 test_output_dir <- "test_results"

@@ -4,7 +4,8 @@
 ![RStudio](https://img.shields.io/badge/RStudio-47A141?style=for-the-badge&logo=rstudio&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Testes](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)
+![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)
+![CI/CD](https://github.com/galafis/Biostatistics-Research-Platform-R/actions/workflows/r-ci.yml/badge.svg)
 
 ## 🖼️ Imagem Hero
 
@@ -31,6 +32,9 @@ This repository, **Biostatistics-Research-Platform-R**, provides a robust and pr
 
 ```
 Biostatistics-Research-Platform-R/
+├── .github/              # GitHub specific configurations (e.g., workflows, GitHub Pages)
+│   └── workflows/        # GitHub Actions workflows
+│       └── r-ci.yml      # Continuous Integration workflow for R
 ├── data/                 # Sample data files
 │   └── sample_data.csv
 ├── docs/                 # Additional documentation and reports
@@ -38,12 +42,12 @@ Biostatistics-Research-Platform-R/
 ├── src/                  # Source code for the biostatistics platform
 │   └── main.R
 ├── tests/                # Unit and functional tests
-│   └── test_main.R
-├── .github/              # GitHub specific configurations (e.g., workflows, GitHub Pages)
+│   ├── test_main.R       # Script to run main analysis for testing
+│   └── testthat.R        # Unit tests using the testthat framework
+├── CODE_OF_CONDUCT.md    # Code of Conduct for the project community
+├── CONTRIBUTING.md       # Guidelines for contributing to the project
 ├── LICENSE               # Project license file
 ├── README.md             # Project README file (this file)
-└── CONTRIBUTING.md       # Guidelines for contributing to the project
-└── CODE_OF_CONDUCT.md    # Code of Conduct for the project community
 └── .Rprofile             # R environment configuration
 ```
 
@@ -100,10 +104,10 @@ Unit tests are available in the `tests/` directory. To run them:
 
 ```bash
 cd Biostatistics-Research-Platform-R
-Rscript -e "library(testthat); test_file(\"tests/testthat.R\")"
+Rscript -e "library(testthat); test_dir(\"tests\")"
 ```
 
-This will execute the `testthat.R` script, which loads sample data, runs the analysis, and verifies the creation of output files.
+This will execute the tests defined in the `tests/` directory, which include `test_main.R` and `testthat.R`.
 
 ### Author
 
@@ -132,6 +136,9 @@ Este repositório, **Biostatistics-Research-Platform-R**, oferece uma plataforma
 
 ```
 Biostatistics-Research-Platform-R/
+├── .github/              # Configurações específicas do GitHub (ex: workflows, GitHub Pages)
+│   └── workflows/        # Workflows do GitHub Actions
+│       └── r-ci.yml      # Workflow de Integração Contínua para R
 ├── data/                 # Arquivos de dados de exemplo
 │   └── sample_data.csv
 ├── docs/                 # Documentação e relatórios adicionais
@@ -139,12 +146,12 @@ Biostatistics-Research-Platform-R/
 ├── src/                  # Código-fonte da plataforma de bioestatística
 │   └── main.R
 ├── tests/                # Testes unitários e funcionais
-│   └── test_main.R
-├── .github/              # Configurações específicas do GitHub (ex: workflows, GitHub Pages)
+│   ├── test_main.R       # Script para executar a análise principal para testes
+│   └── testthat.R        # Testes unitários usando o framework testthat
+├── CODE_OF_CONDUCT.md    # Código de Conduta para a comunidade do projeto
+├── CONTRIBUTING.md       # Diretrizes para contribuir com o projeto
 ├── LICENSE               # Arquivo de licença do projeto
 ├── README.md             # Arquivo README do projeto (este arquivo)
-└── CONTRIBUTING.md       # Diretrizes para contribuir com o projeto
-└── CODE_OF_CONDUCT.md    # Código de Conduta para a comunidade do projeto
 └── .Rprofile             # Configuração do ambiente R
 ```
 
@@ -184,7 +191,7 @@ Rscript src/main.R --input data/sample_data.csv --output results
 
 #### Modo Interativo
 
-You can also run the script interactively within an R environment. If no command-line arguments are provided, the script will generate sample data and perform an analysis, saving results to `results_interactive/`.
+Você também pode executar o script interativamente em um ambiente R. Se nenhum argumento de linha de comando for fornecido, o script gerará dados de exemplo e realizará uma análise, salvando os resultados em `results_interactive/`.
 
 ```R
 source("src/main.R")
@@ -201,13 +208,12 @@ Testes unitários estão disponíveis no diretório `tests/`. Para executá-los:
 
 ```bash
 cd Biostatistics-Research-Platform-R
-Rscript -e "library(testthat); test_file(\"tests/testthat.R\")"
+Rscript -e "library(testthat); test_dir(\"tests\")"
 ```
 
-Isso executará o script `testthat.R`, que carrega dados de exemplo, executa a análise e verifica a criação dos arquivos de saída.
+Isso executará os testes definidos no diretório `tests/`, que incluem `test_main.R` e `testthat.R`.
 
 ### Autor
 
 **Gabriel Demetrios Lafis**
-
 

@@ -6,36 +6,18 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup R
-        uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: '4.x'
-
-      - name: Install R dependencies
-        run: |
-          R -e 'install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "broom", "testthat"), repos="http://cran.us.r-project.org")'
-
-      - name: Run R script and generate results
-        run: |
-          mkdir -p Biostatistics-Research-Platform-R/results
-          Rscript Biostatistics-Research-Platform-R/src/main.R --input Biostatistics-Research-Platform-R/data/sample_data.csv --output Biostatistics-Research-Platform-R/results
+        uses: actions/checkout@v4
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Biostatistics-Research-Platform-R
-          # The branch to deploy to. Defaults to gh-pages.
-          # For user/organization pages, it should be master.
-          # For project pages, it should be gh-pages.
-          # In this case, we are deploying the content of the repository itself, so we don't need a specific branch.
+          publish_dir: ./
           # The content will be served from the root of the gh-pages branch.
           # We will configure GitHub Pages to serve from the main branch / (root).
 
