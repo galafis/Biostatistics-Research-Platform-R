@@ -4,8 +4,6 @@
 ![RStudio](https://img.shields.io/badge/RStudio-47A141?style=for-the-badge&logo=rstudio&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)
-![CI/CD](https://github.com/galafis/Biostatistics-Research-Platform-R/actions/workflows/r-ci.yml/badge.svg)
 
 ## 🖼️ Imagem Hero
 
