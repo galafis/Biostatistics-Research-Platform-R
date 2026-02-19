@@ -15,6 +15,22 @@
 
 This repository, **Biostatistics-Research-Platform-R**, provides a robust and professional R-based platform for advanced biostatistical analysis. It is designed to handle various statistical tasks, including descriptive statistics, correlation analysis, t-tests, ANOVA, and linear regression, with integrated data loading, processing, and visualization capabilities. The platform emphasizes clean code, reproducibility, and ease of use for researchers and data scientists.
 
+```mermaid
+flowchart LR
+    A[Clinical Data\nCSV Input] --> B[Statistical Analysis\nDescriptive Stats\nCorrelation Matrix]
+    B --> C[Hypothesis Testing\nt-test / ANOVA\nGroup Comparisons]
+    C --> D[Survival Analysis\nKaplan-Meier\nCox Regression]
+    D --> E[Visualization\nggplot2 Scatter\nRegression Plots]
+    E --> F[Publication\nStructured Output\nReproducible Reports]
+
+    style A fill:#276DC3,color:#fff
+    style B fill:#47A141,color:#fff
+    style C fill:#E07B39,color:#fff
+    style D fill:#B5446E,color:#fff
+    style E fill:#5C6BC0,color:#fff
+    style F fill:#00897B,color:#fff
+```
+
 ### Features
 
 *   **Data Loading**: Supports CSV file input for flexible data integration.
