@@ -4,6 +4,7 @@
 ![RStudio](https://img.shields.io/badge/RStudio-47A141?style=for-the-badge&logo=rstudio&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](Dockerfile)
 
 ## 🖼️ Imagem Hero
 
